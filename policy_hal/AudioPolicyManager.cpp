@@ -1416,7 +1416,7 @@ status_t AudioPolicyManagerCustom::getOutputForAttr(const audio_attributes_t *at
 
     return AudioPolicyManager::getOutputForAttr(attr, output, session, stream,
                                                 (uid_t)uid, &tConfig,
-                                                flags, selectedDeviceId,
+                                                flags, *selectedDeviceId,
                                                 portId);
 }
 
@@ -2012,7 +2012,7 @@ status_t AudioPolicyManagerCustom::getInputForAttr(const audio_attributes_t *att
                                                uid,
                                                config,
                                                flags,
-                                               selectedDeviceId,
+                                               *selectedDeviceId,
                                                inputType,
                                                portId);
 }
